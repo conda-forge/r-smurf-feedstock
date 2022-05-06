@@ -1,4 +1,4 @@
-{% set version = '1.1.2' %}
+{% set version = "1.1.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/smurf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/smurf/smurf_{{ version }}.tar.gz
-  sha256: 4ee92da72e4db2a3b33e2fb879ff5d5fcf7a8ed85b42a819a4d12a41de250503
+  sha256: eb0d3764321760e9ab6da26575c9136cef96cd73324e8b9a51209fb0f46f2959
 
 build:
-  merge_build_host: True  # [win]
-  skip: True  # [win]
+  merge_build_host: true  # [win]
+  skip: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -66,12 +66,10 @@ test:
 about:
   home: https://gitlab.com/TReynkens/smurf
   license: GPL-2.0-or-later
-  summary: Implementation of the SMuRF algorithm of Devriendt et al. (2021) <doi:10.1016/j.insmatheco.2020.11.010>
-    to fit generalized linear models (GLMs) with multiple types of predictors via regularized
-    maximum likelihood.
+  summary: Implementation of the SMuRF algorithm of Devriendt et al. (2021) <doi:10.1016/j.insmatheco.2020.11.010> to fit generalized linear models (GLMs) with multiple types of predictors via regularized maximum likelihood.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
