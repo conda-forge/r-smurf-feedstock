@@ -1,11 +1,22 @@
+About r-smurf-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-smurf-feedstock/blob/main/LICENSE.txt)
+
 About r-smurf
-=============
+-------------
 
 Home: https://gitlab.com/TReynkens/smurf
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-smurf-feedstock/blob/main/LICENSE.txt)
+Summary: Implementation of the SMuRF algorithm of Devriendt et al. (2021) <doi:10.1016/j.insmatheco.2020.11.010> to fit generalized linear models (GLMs) with multiple types of predictors via regularized maximum likelihood.
+About r-smurf
+-------------
+
+Home: https://gitlab.com/TReynkens/smurf
+
+Package license: GPL-2.0-or-later
 
 Summary: Implementation of the SMuRF algorithm of Devriendt et al. (2021) <doi:10.1016/j.insmatheco.2020.11.010> to fit generalized linear models (GLMs) with multiple types of predictors via regularized maximum likelihood.
 
