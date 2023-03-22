@@ -1,4 +1,4 @@
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/smurf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/smurf/smurf_{{ version }}.tar.gz
-  sha256: 716dd6115d964962c5411e10e9c49b21fa0f2cbb04dade0b0c54598bbd324525
+  sha256: 86ecdd0614cbcc567f1ec9ebb6ad27678909ab293b931ef80627827e8cfcffbe
 
 build:
   merge_build_host: true  # [win]
