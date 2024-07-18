@@ -1,6 +1,5 @@
 {% set version = "1.1.5" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-smurf
@@ -13,9 +12,9 @@ source:
   sha256: 86ecdd0614cbcc567f1ec9ebb6ad27678909ab293b931ef80627827e8cfcffbe
 
 build:
-  merge_build_host: true  # [win]
-  skip: true  # [win]
-  number: 1
+  # Checking windows to see if it passes. Uncomment the line if it fails.
+  # skip: true  # [win]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -47,7 +48,6 @@ requirements:
     - liblapack
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-mass
     - r-matrix
     - r-rcolorbrewer
